@@ -1,7 +1,7 @@
 <template>
   <v-sheet
       max-width="700"
-      class="slide-container"
+      class="slide-container main"
     >
     <v-slide-group
         mandatory
@@ -32,7 +32,7 @@
 import { mapMutations } from 'vuex'
 
 export default {
-  name: 'slideGroup',
+  name: 'slideGroupMain',
   props: ['items'],
   methods: {
     ...mapMutations([

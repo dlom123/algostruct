@@ -5,20 +5,73 @@
   .slide-container
     padding: 3px
     border: 2px solid $dark-gray
-  .v-slide-group__content
-    .slide-button-active
-      background-color: $primary !important
-      border-color: $primary !important
-      color: white
+    &.main
+      .v-slide-group__content
+        .slide-button-active
+          background-color: $primary
+          border-color: $primary
+          color: $off-white
+    &.code
+      border-color: $hacker-green
+      background-color: $off-black
+      .v-slide-group__content
+        .v-btn
+          color: $hacker-green
+        .v-btn--active
+          background-color: darken($hacker-green, 10%)
+          color: $off-white
+  .help-circle
+    color: $medium-blue
+  .search-input
+    border: 2px solid $medium-blue
+  .current-step div
+    &.main
+      color: $dark-blue
+      font-size: 22pt
+    &.choices
+      .btn-yes
+        background-color: $primary !important
+      .btn-no
+        background-color: $red !important
 
 .algorithm
   .item
     min-height: 60px
     font-size: 36pt
     background-color: $dark-blue
-    color: white
+    color: $off-white
     .v-icon
       color: $primary
   .item-index
-    color: black
+    color: $off-black
     font-weight: bold
+  .btn-reset
+    background-color: $medium-gray !important
+  .card-steps
+    background-color: $light-gray
+    font-size: 14pt
+  .card-code
+    background-color: $off-black
+    color: red
+    .headline
+      color: $off-white
+  &.linear-search
+    .highlight
+      color: $off-black
+      background-color: $primary
+
+.card-code
+  .line-numbers
+    color: darken($off-white, 25%)
+  .code
+    color: $off-white !important
+
+/* tooltips */
+.tooltip-instructions
+  background-color: $medium-blue
+
+/* transitions */
+.fade-enter, .fade-leave-to
+  opacity: 0
+.fade-enter-active, .fade-leave-active
+  transition: opacity .5s

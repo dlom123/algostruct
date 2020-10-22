@@ -9,7 +9,12 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     currentContent: null,
-    dataType: 'int'
+    currentLanguage: null,
+    dataType: 'int',
+    languages: [
+      { name: 'c', text: 'C' },
+      { name: 'python', text: 'Python' }
+    ]
   },
   actions,
   mutations,
