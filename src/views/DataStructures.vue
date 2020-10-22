@@ -4,7 +4,7 @@
       <v-col><h1>Data Structures</h1></v-col>
       <v-spacer></v-spacer>
       <v-col align="right">
-        <SlideGroup :items="dataStructures" />
+        <SlideGroupMain :items="dataStructures" />
       </v-col>
     </v-row>
 
@@ -17,7 +17,7 @@
 
 <script>
 import { mapMutations, mapState } from 'vuex'
-import SlideGroup from '@/components/SlideGroup.vue'
+import SlideGroupMain from '@/components/SlideGroupMain.vue'
 import Arrays from '@/components/dataStructures/Arrays.vue'
 import Stacks from '@/components/dataStructures/Stacks.vue'
 import Queues from '@/components/dataStructures/Queues.vue'
@@ -36,7 +36,7 @@ export default {
     Queues,
     Stacks,
     Tries,
-    SlideGroup
+    SlideGroupMain
   },
   data () {
     return {

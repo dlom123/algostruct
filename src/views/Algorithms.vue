@@ -4,7 +4,7 @@
       <v-col><h1>Algorithms</h1></v-col>
       <v-spacer></v-spacer>
       <v-col align="right">
-        <SlideGroup :items="algorithms" />
+        <SlideGroupMain :items="algorithms" />
       </v-col>
     </v-row>
 
@@ -17,7 +17,7 @@
 
 <script>
 import { mapMutations, mapState } from 'vuex'
-import SlideGroup from '@/components/SlideGroup'
+import SlideGroupMain from '@/components/SlideGroupMain'
 import BinarySearch from '@/components/algorithms/BinarySearch'
 import LinearSearch from '@/components/algorithms/LinearSearch'
 
@@ -26,7 +26,7 @@ export default {
   components: {
     BinarySearch,
     LinearSearch,
-    SlideGroup
+    SlideGroupMain
   },
   data () {
     return {
