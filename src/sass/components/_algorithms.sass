@@ -24,15 +24,24 @@
     color: $medium-blue
   .search-input
     border: 2px solid $medium-blue
-  .current-step div
-    &.main
-      color: $dark-blue
-      font-size: 22pt
-    &.choices
-      .btn-yes
-        background-color: $primary !important
-      .btn-no
+  .container-current-step
+    border: 2px solid $medium-gray
+    min-height: 160px
+    .current-step div
+      &.main
+        color: $dark-blue
+        font-size: 22pt
+      &.choices
+        .btn-yes
+          background-color: $primary !important
+        .btn-no
+          background-color: $red !important
+    .snackbar
+      .v-sheet
         background-color: $red !important
+      .v-snack__content
+        font-size: 12pt
+        font-weight: bold
 
 .algorithm
   .item
@@ -40,11 +49,20 @@
     font-size: 36pt
     background-color: $dark-blue
     color: $off-white
+    border: 2px solid $medium-blue
     .v-icon
       color: $primary
+  .item-selected
+    border: 2px solid $hacker-green
+  .item-not
+    background-color: lighten($red, 10%)
+  .item-found
+    background-color: $primary
   .item-index
     color: $off-black
     font-weight: bold
+  .btn-randomize
+    background-color: $yellow !important
   .btn-reset
     background-color: $medium-gray !important
   .card-steps
