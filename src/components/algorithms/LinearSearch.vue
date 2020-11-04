@@ -97,7 +97,7 @@
     <v-row class="mt-4 mb-2 container-current-step" align="center">
       <v-col align="center">
         <transition name="fade">
-          <div class="current-step">
+          <div :class="['current-step', {'found': isDone && found, 'not-found': isDone && !found}]">
             <div v-if="!isDone" class="main">{{ guide.steps[this.currentStep-1].main }}
               <template v-if="guide.steps[this.currentStep-1].help">
                 <v-tooltip right content-class="tooltip-instructions">

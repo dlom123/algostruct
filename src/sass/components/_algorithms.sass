@@ -1,7 +1,8 @@
 .v-main__wrap h1
-  color: black
+  color: $off-white
   
 .algorithms, .data-structures
+  color: $off-white
   .slide-container
     padding: 3px
     border: 2px solid $dark-gray
@@ -11,6 +12,7 @@
           background-color: $primary
           border-color: $primary
           color: $off-white
+          font-weight: bold
     &.code
       border-color: $hacker-green
       background-color: $off-black
@@ -27,11 +29,14 @@
   .container-current-step
     border: 2px solid $medium-gray
     min-height: 160px
-    .current-step div
-      &.main
-        color: $dark-blue
+    .current-step
+      &.found
+        color: $primary !important
+      &.not-found
+        color: lighten($red, 10%) !important
+      div.main
         font-size: 22pt
-      &.choices
+      div.choices
         .btn-yes
           background-color: $primary !important
         .btn-no
@@ -59,7 +64,7 @@
   .item-found
     background-color: $primary
   .item-index
-    color: $off-black
+    color: $off-white
     font-weight: bold
   .btn-randomize
     background-color: $yellow !important
@@ -70,7 +75,6 @@
     font-size: 14pt
   .card-code
     background-color: $off-black
-    color: red
     .headline
       color: $off-white
   &.linear-search
