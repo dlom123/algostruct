@@ -193,7 +193,6 @@
 <script>
 import { mapMutations, mapState } from 'vuex'
 import SlideGroupCode from '@/components/SlideGroupCode'
-import { shuffle } from 'underscore'
 
 export default {
   name: 'algorithms',
@@ -228,7 +227,7 @@ export default {
       hasChosen: true,
       i: 0,
       isDone: false,
-      items: [1, 2, 3, 4, 5, 6, 7, 8],
+      items: [],
       found: false,
       guide: {
         init: 'Start at the first element.',
@@ -248,6 +247,7 @@ export default {
       },
       messageFound: 'Found the value!',
       messageNotFound: 'Value not found.',
+      numItems: 8,
       searchValue: null,
       showCurrentStep: true,
       snackbar: false,
@@ -332,9 +332,12 @@ export default {
     },
     randomize () {
       if (this.i === 0 && this.currentStep === 1) {
-        const max = this.items.length * 2
+        const max = this.numItems * 2
+        // populate the items array
+        this.items = Array.from(Array(this.numItems)).map(x => Math.floor(Math.random() * Math.floor(max)) + 1)
+        // generate the search value
         this.searchValue = Math.floor(Math.random() * Math.floor(max)) + 1
-        this.items = shuffle(this.items)
+        // this.items = shuffle(this.items)
       } else {
         this.showSnackbar('Cannot randomize mid-search. Reset and try again.')
       }
