@@ -6,18 +6,6 @@
       </v-col>
     </v-row>
 
-    <v-row align="center">
-      <!-- <v-col align="right">
-        <v-btn
-          light
-          :color="guideBtnColor"
-          @click="toggleGuide"
-        >
-          Turn {{ guide ? "off" : "on" }} guide
-        </v-btn>
-      </v-col> -->
-    </v-row>
-
     <v-row>
       <v-col>
         <p>Linear search involves looking at each element, one at a time, from the first element through the last one.
@@ -252,9 +240,8 @@ export default {
       messageNotFound: 'Value not found.',
       numItems: 8,
       searchValue: null,
-      showCurrentStep: true,
       snackbar: false,
-      snackbarText: 'hey',
+      snackbarText: '',
       snackbarTimeout: 3000
     }
   },
@@ -345,7 +332,6 @@ export default {
         this.items = Array.from(Array(this.numItems)).map(x => Math.floor(Math.random() * Math.floor(max)) + 1)
         // generate the search value
         this.searchValue = Math.floor(Math.random() * Math.floor(max)) + 1
-        // this.items = shuffle(this.items)
       } else {
         this.showSnackbar('Cannot randomize mid-search. Reset and try again.')
       }

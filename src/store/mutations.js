@@ -4,8 +4,5 @@ export default {
   },
   setCurrentLanguage: (state, payload) => {
     state.currentLanguage = payload
-  },
-  setDataType: (state, payload) => {
-    state.dataType = payload
   }
 }

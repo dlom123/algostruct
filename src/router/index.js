@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '@/views/Home.vue'
 import Algorithms from '@/views/Algorithms.vue'
 import DataStructures from '@/views/DataStructures.vue'
 
@@ -10,7 +9,7 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    redirect: { name: 'algorithms' }
   },
   {
     path: '/algorithms',

@@ -6,18 +6,6 @@
       </v-col>
     </v-row>
 
-    <v-row align="center">
-      <!-- <v-col align="right">
-        <v-btn
-          light
-          :color="guideBtnColor"
-          @click="toggleGuide"
-        >
-          Turn {{ guide ? "off" : "on" }} guide
-        </v-btn>
-      </v-col> -->
-    </v-row>
-
     <v-row>
       <v-col>
         <p>Binary search requires that elements are already in sorted order. It involves looking at
@@ -274,9 +262,8 @@ export default {
       messageNotFound: 'Value not found.',
       numItems: 8,
       searchValue: null,
-      showCurrentStep: true,
       snackbar: false,
-      snackbarText: 'hey',
+      snackbarText: '',
       snackbarTimeout: 3000
     }
   },
