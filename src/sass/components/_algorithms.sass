@@ -1,7 +1,8 @@
 .v-main__wrap h1
-  color: black
+  color: $off-white
   
 .algorithms, .data-structures
+  color: $off-white
   .slide-container
     padding: 3px
     border: 2px solid $dark-gray
@@ -11,6 +12,7 @@
           background-color: $primary
           border-color: $primary
           color: $off-white
+          font-weight: bold
     &.code
       border-color: $hacker-green
       background-color: $off-black
@@ -24,15 +26,27 @@
     color: $medium-blue
   .search-input
     border: 2px solid $medium-blue
-  .current-step div
-    &.main
-      color: $dark-blue
-      font-size: 22pt
-    &.choices
-      .btn-yes
-        background-color: $primary !important
-      .btn-no
-        background-color: $red !important
+  .container-current-step
+    border: 2px solid $medium-gray
+    min-height: 160px
+    .current-step
+      &.found
+        color: $hacker-green !important
+      &.not-found
+        color: lighten($red, 10%) !important
+      div.main
+        font-size: 22pt
+      div.choices
+        .btn-yes
+          background-color: $hacker-green !important
+        .btn-no
+          background-color: $red !important
+  .snackbar
+    .v-sheet
+      background-color: $red !important
+    .v-snack__content
+      font-size: 12pt
+      font-weight: bold
 
 .algorithm
   .item
@@ -40,11 +54,20 @@
     font-size: 36pt
     background-color: $dark-blue
     color: $off-white
+    border: 2px solid $medium-blue
     .v-icon
       color: $primary
+  .item-selected
+    border: 2px solid $primary
+  .item-not
+    background-color: lighten($red, 10%)
+  .item-found
+    background-color: $hacker-green
   .item-index
-    color: $off-black
+    color: $off-white
     font-weight: bold
+  .btn-randomize
+    background-color: $yellow !important
   .btn-reset
     background-color: $medium-gray !important
   .card-steps
@@ -52,13 +75,18 @@
     font-size: 14pt
   .card-code
     background-color: $off-black
-    color: red
     .headline
       color: $off-white
   &.linear-search
     .highlight
       color: $off-black
       background-color: $primary
+    .highlight-found
+      color: $off-black
+      background-color: $hacker-green
+    .highlight-not-found
+      color: $off-black
+      background-color: $red
 
 .card-code
   .line-numbers
