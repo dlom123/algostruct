@@ -31,14 +31,14 @@
     min-height: 160px
     .current-step
       &.found
-        color: $primary !important
+        color: $hacker-green !important
       &.not-found
         color: lighten($red, 10%) !important
       div.main
         font-size: 22pt
       div.choices
         .btn-yes
-          background-color: $primary !important
+          background-color: $hacker-green !important
         .btn-no
           background-color: $red !important
   .snackbar
@@ -58,11 +58,11 @@
     .v-icon
       color: $primary
   .item-selected
-    border: 2px solid $hacker-green
+    border: 2px solid $primary
   .item-not
     background-color: lighten($red, 10%)
   .item-found
-    background-color: $primary
+    background-color: $hacker-green
   .item-index
     color: $off-white
     font-weight: bold
@@ -81,6 +81,12 @@
     .highlight
       color: $off-black
       background-color: $primary
+    .highlight-found
+      color: $off-black
+      background-color: $hacker-green
+    .highlight-not-found
+      color: $off-black
+      background-color: $red
 
 .card-code
   .line-numbers

@@ -137,6 +137,7 @@
     </v-row>
 
     <v-row class="mt-8">
+
       <v-col cols="6">
         <v-card class="pb-3 card-steps">
           <v-card-title class="headline pb-0">Steps</v-card-title>
@@ -152,6 +153,7 @@
           </v-list-item>
         </v-card>
       </v-col>
+
       <v-col cols="6">
         <v-card class="px-1 pb-3 card-code">
           <v-card-title class="headline pb-0">
@@ -208,7 +210,7 @@ export default {
           { step: 1, line: '  for (int i = 0; i < SIZE; i++)' },
           { step: 0, line: '  {' },
           { step: 2, line: '    if (items[i] == value)' },
-          { step: 0, line: '  {' },
+          { step: 0, line: '    {' },
           { step: -1, line: '      return 1;' },
           { step: 0, line: '    }' },
           { step: 0, line: '  }' },
@@ -230,7 +232,7 @@ export default {
       items: [],
       found: false,
       guide: {
-        init: 'Start at the first element.',
+        init: 'Starting with the first element, repeat until the value is found or there are no more elements to look at.',
         steps: [
           {
             main: 'Look at the next element.',
@@ -238,6 +240,7 @@ export default {
           },
           {
             main: 'Is this the value you are looking for?',
+            help: 'Does the value in the box match the value you are trying to find?',
             choices: [
               'Yes',
               'No'
@@ -283,10 +286,15 @@ export default {
     ]),
     highlightStep (i) {
       const classes = []
-      if (this.currentStep === i ||
-         (this.isDone && this.found && i === -1) ||
-         (this.isDone && !this.found && i === -2)) {
+      if (this.currentStep === i) {
         classes.push('highlight')
+      }
+      if (this.isDone) {
+        if (this.found && i === -1) {
+          classes.push('highlight-found')
+        } else if (!this.found && i === -2) {
+          classes.push('highlight-not-found')
+        }
       }
       return classes
     },
@@ -351,7 +359,6 @@ export default {
     },
     revealItem (i) {
       // only reveal the next item if:
-      //   - a search value has been entered
       //   - there is no pending choice to be made
       //   - and the selected item is the next one in the algorithm's steps
       if (!this.isDone && i === this.i) {

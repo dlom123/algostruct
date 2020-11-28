@@ -4,12 +4,15 @@
       <v-col><h1>Data Structures</h1></v-col>
       <v-spacer></v-spacer>
       <v-col align="right">
-        <SlideGroupMain :items="dataStructures" />
+        <!-- <SlideGroupMain :items="dataStructures" /> -->
       </v-col>
     </v-row>
 
     <v-row>
-      <component :is="currentContent" />
+      <!-- <component :is="currentContent" /> -->
+      <v-col>
+        <h2>Coming soon!</h2>
+      </v-col>
     </v-row>
 
   </v-container>
@@ -17,26 +20,26 @@
 
 <script>
 import { mapMutations, mapState } from 'vuex'
-import SlideGroupMain from '@/components/SlideGroupMain.vue'
-import Arrays from '@/components/dataStructures/Arrays.vue'
-import Stacks from '@/components/dataStructures/Stacks.vue'
-import Queues from '@/components/dataStructures/Queues.vue'
-import LinkedLists from '@/components/dataStructures/LinkedLists.vue'
-import HashTables from '@/components/dataStructures/HashTables.vue'
-import BinarySearchTrees from '@/components/dataStructures/BinarySearchTrees.vue'
-import Tries from '@/components/dataStructures/Tries.vue'
+// import SlideGroupMain from '@/components/SlideGroupMain.vue'
+// import Arrays from '@/components/dataStructures/Arrays.vue'
+// import Stacks from '@/components/dataStructures/Stacks.vue'
+// import Queues from '@/components/dataStructures/Queues.vue'
+// import LinkedLists from '@/components/dataStructures/LinkedLists.vue'
+// import HashTables from '@/components/dataStructures/HashTables.vue'
+// import BinarySearchTrees from '@/components/dataStructures/BinarySearchTrees.vue'
+// import Tries from '@/components/dataStructures/Tries.vue'
 
 export default {
   name: 'dataStructures',
   components: {
-    Arrays,
-    BinarySearchTrees,
-    HashTables,
-    LinkedLists,
-    Queues,
-    Stacks,
-    Tries,
-    SlideGroupMain
+    // Arrays,
+    // BinarySearchTrees,
+    // HashTables,
+    // LinkedLists,
+    // Queues,
+    // Stacks,
+    // Tries,
+    // SlideGroupMain
   },
   data () {
     return {
