@@ -4,6 +4,8 @@ AlgoStruct is a computer science playground! It allows you to visualize and inte
 
 The steps for each algorithm are outlined as high-level instructions and also in source code in multiple languages. Just follow the steps, clicking through the interactive interface to learn and practice computer science principles!
 
+Check out the [walkthrough video](https://www.youtube.com/watch?v=9OvqknvQwFM)!
+
 ---
 
 ## Project setup
