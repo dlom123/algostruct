@@ -4,6 +4,8 @@ AlgoStruct is a computer science playground! It allows you to visualize and inte
 
 The steps for each algorithm are outlined as high-level instructions and also in source code in multiple languages. Just follow the steps, clicking through the interactive interface to learn and practice computer science principles!
 
+![AlgoStruct screenshot](https://github.com/dlom123/algostruct/blob/main/public/img/screenshot.png?raw=true)
+
 Check out the [walkthrough video](https://www.youtube.com/watch?v=9OvqknvQwFM)!
 
 ---
@@ -17,16 +19,3 @@ npm install
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
